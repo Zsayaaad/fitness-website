@@ -1,9 +1,12 @@
-import { Container } from '../components/layout/Container.jsx'
+import { AboutPreview, ClassesSection, Hero, VideoSection } from "../features/home/index.js";
 
 export default function HomePage() {
   return (
-    <Container as="section" className="py-20">
-      <h1 className="font-display text-4xl font-semibold text-heading">Home</h1>
-    </Container>
-  )
+    <>
+      <Hero />
+      <ClassesSection />
+      <AboutPreview />
+      <VideoSection />
+    </>
+  );
 }

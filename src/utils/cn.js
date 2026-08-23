@@ -1,5 +1,6 @@
-import { clsx } from 'clsx'
+import { clsx } from "clsx";
 
 export function cn(...inputs) {
-  return clsx(inputs)
+  // Simplifies writing conditional styles in React without messy string concatenations
+  return clsx(inputs);
 }

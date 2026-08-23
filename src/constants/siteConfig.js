@@ -6,8 +6,9 @@ export const SITE_CONFIG = {
   email: 'support@yourbrand.com',
   phone: '+1 (202) 555 0147',
   socials: [
-    { label: 'Facebook', url: 'https://www.facebook.com/' },
-    { label: 'YouTube', url: 'https://www.youtube.com/' },
-    { label: 'Instagram', url: 'https://www.instagram.com/' },
+    { label: "Facebook", url: "https://www.facebook.com/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/" },
+    { label: "YouTube", url: "https://www.youtube.com/" },
+    { label: "Instagram", url: "https://www.instagram.com/" },
   ],
 }

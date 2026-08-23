@@ -1,11 +1,11 @@
-import { Link, NavLink } from 'react-router-dom'
-import { MAIN_NAV } from '../../constants/navigation.js'
-import { PATHS } from '../../routes/paths.js'
-import { useDisclosure } from '../../hooks/useDisclosure.js'
-import { cn } from '../../utils/cn.js'
-import { Container } from './Container.jsx'
-import { Button } from '../ui/Button.jsx'
-import logoDark from '../../assets/images/logo-dark.svg'
+import { Link, NavLink } from "react-router-dom";
+import { MAIN_NAV } from "../../constants/navigation.js";
+import { PATHS } from "../../routes/paths.js";
+import { useDisclosure } from "../../hooks/useDisclosure.js";
+import { cn } from "../../utils/cn.js";
+import { Container } from "./Container.jsx";
+import { Button } from "../ui/Button.jsx";
+import logoDark from "../../assets/images/logo-dark.svg";
 
 function NavLinkItem({ link, onClick }) {
   return (
@@ -15,25 +15,36 @@ function NavLinkItem({ link, onClick }) {
       end={link.path === PATHS.home}
       className={({ isActive }) =>
         cn(
-          'relative text-lg font-medium text-primary transition-colors after:absolute after:-bottom-[7px] after:left-0 after:h-[3px] after:w-full after:origin-left after:rounded-full after:bg-accent after:transition-transform after:duration-300 after:ease-out',
-          isActive ? 'after:scale-x-100' : 'after:scale-x-0 hover:after:scale-x-100',
+          "relative text-lg font-medium text-primary transition-colors after:absolute after:-bottom-[7px] after:left-0 after:h-[3px] after:w-full after:origin-left after:rounded-full after:bg-accent after:transition-transform after:duration-300 after:ease-out",
+          isActive
+            ? "after:scale-x-100"
+            : "after:scale-x-0 hover:after:scale-x-100",
         )
       }
     >
       {link.label}
     </NavLink>
-  )
+  );
 }
 
 export function Navbar() {
-  const { isOpen, onClose, onToggle } = useDisclosure()
+  const { isOpen, onClose, onToggle } = useDisclosure();
 
   return (
     <header className="relative z-50">
       <div className="relative z-50 bg-white py-[15px] lg:py-5 xl:py-[30px]">
         <Container className="relative flex items-center justify-between">
-          <Link to={PATHS.home} onClick={onClose} className="shrink-0" aria-label="FitCoach — Home">
-            <img src={logoDark} alt="FitCoach" className="h-[35px] w-auto xl:h-11" />
+          <Link
+            to={PATHS.home}
+            onClick={onClose}
+            className="shrink-0"
+            aria-label="FitCoach — Home"
+          >
+            <img
+              src={logoDark}
+              alt="FitCoach"
+              className="h-[35px] w-auto xl:h-11"
+            />
           </Link>
 
           <nav
@@ -61,26 +72,27 @@ export function Navbar() {
               onClick={onToggle}
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
-              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              aria-label={isOpen ? "Close menu" : "Open menu"}
               className="flex size-9 shrink-0 flex-col items-center justify-center gap-1.5 rounded-full bg-primary lg:size-10 xl:hidden"
             >
               <span
                 className={cn(
-                  'h-0.5 w-4 rounded-full bg-[#eef1e8] transition-transform duration-300 lg:w-5',
-                  isOpen && 'translate-y-[4px] rotate-45',
+                  "h-0.5 w-4 rounded-full bg-[#eef1e8] transition-transform duration-300 lg:w-5",
+                  isOpen && "translate-y-[4px] rotate-45",
                 )}
               />
               <span
                 className={cn(
-                  'h-0.5 w-4 rounded-full bg-[#eef1e8] transition-transform duration-300 lg:w-5',
-                  isOpen && '-translate-y-[4px] -rotate-45',
+                  "h-0.5 w-4 rounded-full bg-[#eef1e8] transition-transform duration-300 lg:w-5",
+                  isOpen && "-translate-y-[4px] -rotate-45",
                 )}
               />
             </button>
           </div>
         </Container>
 
-        {isOpen && (
+        {/* {isOpen && (
+    </>
           <>
             <div
               className="fixed inset-0 z-40 bg-primary/60 xl:hidden"
@@ -101,8 +113,41 @@ export function Navbar() {
               </ul>
             </nav>
           </>
-        )}
+        )} */}
       </div>
+      <>
+        {/* Backdrop */}
+        <div
+          className={cn(
+            "fixed inset-0 z-40 bg-primary/60 xl:hidden transition-opacity duration-500 ease-in-out",
+            isOpen
+              ? "opacity-100 pointer-events-auto"
+              : "opacity-0 pointer-events-none",
+          )}
+          onClick={onClose}
+          aria-hidden="true"
+        />
+
+        {/* Mobile Menu */}
+        <nav
+          id="mobile-menu"
+          aria-label="Mobile navigation"
+          className={cn(
+            "absolute inset-x-0 top-full z-40 bg-white px-6 pb-7 pt-4 shadow-xl shadow-primary/10 xl:hidden transition-all duration-300 ease-in-out",
+            isOpen
+              ? "opacity-100 translate-y-0 pointer-events-auto"
+              : "opacity-0 -translate-y-2 pointer-events-none",
+          )}
+        >
+          <ul className="flex flex-col items-start gap-3">
+            {MAIN_NAV.map((link) => (
+              <li key={link.label}>
+                <NavLinkItem link={link} onClick={onClose} />
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </>
     </header>
-  )
+  );
 }

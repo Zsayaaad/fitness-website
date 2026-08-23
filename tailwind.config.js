@@ -4,10 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#063434',
-        accent: '#b8fe22',
-        heading: '#1e2222',
-        muted: '#4e5151',
+        primary: "#063434",
+        accent: "#b8fe22",
+        heading: "#1e2222",
+        muted: "#4e5151",
+        mist: "#eef1e8",
       },
       fontFamily: {
         sans: ['"DM Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
