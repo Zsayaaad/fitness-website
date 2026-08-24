@@ -5,6 +5,7 @@ export const SITE_CONFIG = {
     'Transform your body with expert guidance and personalized training programs.',
   email: 'support@yourbrand.com',
   phone: '+1 (202) 555 0147',
+  whatsapp: 'https://wa.me/12025550147',
   socials: [
     { label: "Facebook", url: "https://www.facebook.com/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/" },
