@@ -1,4 +1,6 @@
-import { AboutPreview, ClassesSection, Hero, VideoSection } from "../features/home/index.js";
+import { AboutPreview, ClassesSection, Hero, PricingSection, VideoSection } from "../features/home/index.js";
+import { TestimonialsCarousel } from "../features/testimonials/index.js";
+import { TransformationsGallery } from "../features/transformations/index.js";
 
 export default function HomePage() {
   return (
@@ -7,6 +9,9 @@ export default function HomePage() {
       <ClassesSection />
       <AboutPreview />
       <VideoSection />
+      <TestimonialsCarousel />
+      <PricingSection />
+      <TransformationsGallery />
     </>
   );
 }

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" rx="24" fill="#f5f5f5"/>
+  <circle cx="112" cy="112" r="44" fill="#b8fe22"/>
+  <text x="112" y="126" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#063434" text-anchor="middle">D</text>
+  <text x="184" y="104" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1e2222">David R.</text>
+  <text x="184" y="140" font-family="Arial, sans-serif" font-size="26" fill="#063434">&#9733;&#9733;&#9733;&#9733;&#9733;</text>
+  <rect x="80" y="230" width="640" height="18" rx="9" fill="#d7dddd"/><rect x="80" y="274" width="600" height="18" rx="9" fill="#d7dddd"/><rect x="80" y="318" width="430" height="18" rx="9" fill="#d7dddd"/>
+</svg>

@@ -32,7 +32,7 @@ export function VideoSection() {
   }
 
   return (
-    <section className="pb-20 lg:pb-[100px] xl:pb-[150px]">
+    <section>
       <div className="mx-auto w-full max-w-[1780px] px-5 lg:px-[30px]">
         <div className="grid overflow-hidden rounded-[30px] bg-primary lg:grid-cols-2 xl:grid-cols-5">
           <div className="relative aspect-video overflow-hidden lg:aspect-auto xl:col-span-3">
