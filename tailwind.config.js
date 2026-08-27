@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,jsx}'],
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
       colors: {
@@ -11,14 +11,20 @@ export default {
         mist: "#eef1e8",
       },
       fontFamily: {
-        sans: ['"DM Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        display: ['"General Sans"', '"DM Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['"DM Sans"', "ui-sans-serif", "system-ui", "sans-serif"],
+        display: [
+          '"General Sans"',
+          '"DM Sans"',
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+        ],
       },
       screens: {
-        lg: '810px',
-        xl: '1200px',
+        lg: "810px",
+        xl: "1200px",
       },
     },
   },
   plugins: [],
-}
+};

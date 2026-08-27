@@ -1,9 +1,10 @@
-import { Container } from '../components/layout/Container.jsx'
+import { AboutHero, Content } from "../features/about/index.js";
 
 export default function AboutPage() {
   return (
-    <Container as="section" className="py-20">
-      <h1 className="font-display text-4xl font-semibold text-heading">About</h1>
-    </Container>
-  )
+    <>
+      <AboutHero />
+      <Content />
+    </>
+  );
 }
